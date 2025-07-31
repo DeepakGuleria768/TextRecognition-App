@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    This line says:-->
+
+<!--    "Camera is a feature my app can use — but it's not required to run."-->
+
+<!--    If required="true" (or omitted, because it's true by default), then:-->
+<!--    Your app won't appear in the Play Store on devices without a camera.-->
+
+<!--    By writing required="false":-->
+<!--    Your app can be installed even on devices without a camera.-->
+<!--    You must handle the case when the device doesn't have a camera (e.g., show a message or disable camera feature).-->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+<!--    Hey Android, my app needs permission to use the camera.-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OCR">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.OCR">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

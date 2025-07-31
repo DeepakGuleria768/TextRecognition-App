@@ -1,0 +1,36 @@
+
+The ML Kit Text Recognition v2 API can recognize text in any Chinese, Devanagari,
+Japanese, Korean and Latin character set. The API can also be used to automate
+data-entry tasks such as processing credit cards, receipts, and business cards.
+
+
+Key capabilities...
+1.Recognize text across various scripts and languages Supports recognizing text in Chinese, Devanagari, Japanese, Korean and Latin scripts
+2.Analyzes structure of text Supports detection of symbols, elements, lines and paragraphs
+3.Identify language of text Identifies the language of the recognized text
+4.Real-time recognition Can recognize text in real-time on a wide range of devices
+
+
+Text structure.....
+ The Text Recognizer segments text into blocks, lines, elements and symbols. Roughly speaking:
+a. a Block is a contiguous set of text lines, such as a paragraph or column,
+b. a Line is a contiguous set of words on the same axis, and
+c. an Element is a contiguous set of alphanumeric characters ("word") on the same axis in most Latin languages, or a word in others
+d. an Symbol is a single alphanumeric character on the same axis in most Latin languages, or a character in others
+
+For all detected blocks, lines, elements and symbols,
+the API returns the bounding boxes, corner points,
+rotation information, confidence score, recognized
+languages and recognized text.
+
+SIMPLE BHASHA MEIN.....
+
+Jab YEH api kisi image ya document ko scan karta hai, toh ye cheezein return karta hai:
+
+Bounding Box – Text kahan hai image mein, uska area batata hai (rectangle ke form mein).
+Corner Points – Us rectangle ke 4 kone (points).
+Rotation Info – Text tilted hai ya seedha, uski ghoomne ki angle.
+Confidence Score – Kitna accurate OCR ne text pehchana (0–100%).
+Languages – Kaunsi bhasha ka text hai (jaise Hindi, English).
+Recognized Text – Jo text usne image se padhaa.
+
